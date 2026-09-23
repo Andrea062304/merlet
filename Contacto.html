@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Cotizaciones | MERLET Cítricos</title>
+    <meta name="description" content="Contáctanos para cotizaciones de cítricos frescos (limones y naranjas) al por mayor, pedidos y asesoría personalizada de MERLET.">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- BARRA SUPERIOR -->
+    <div class="top-bar">
+        <div class="top-bar-info">
+            <span>🌿 Producción Sostenible & Cítricos Seleccionados</span>
+            <span>📍 Cotizaciones y Asesoría Comercial Directa</span>
+        </div>
+        <span class="top-bar-badge">Grado 11-02 | Proyecto SENA</span>
+    </div>
+
+    <!-- NAVEGACIÓN PRINCIPAL -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="brand-icon-wrapper">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                        <ellipse cx="12" cy="12" rx="9" ry="7" transform="rotate(-30 12 12)" fill="#fbc02d" stroke="#f57f17" stroke-width="1.5"/>
+                        <path d="M12 5C13 3 16 3 17 4C17 6 15 8 13 8" stroke="#2e7d32" stroke-width="1.5" stroke-linecap="round" fill="#81c784"/>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <h1>MERLET</h1>
+                    <span>Cítricos de Excelencia</span>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="Descripcion.html">Descripción</a>
+                <a href="Productos.html">Productos & Empaque</a>
+                <a href="Contacto.html" class="active nav-cta">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER DE ENCABEZADO -->
+    <section class="info-banner" style="border-radius: 0; margin-bottom: 30px; padding: 45px 24px;">
+        <div style="max-width: 1240px; margin: 0 auto; text-align: center;">
+            <span class="section-tag" style="background: rgba(255,255,255,0.2); color: #ffffff; margin-bottom: 12px;">Atención Personalizada</span>
+            <h1 style="color: #ffffff; font-size: 2.8rem; margin-bottom: 14px;">Ponte en Contacto con MERLET</h1>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin: 0 auto; max-width: 750px;">
+                ¿Deseas una cotización para tu negocio, supermercado o distribuidora? Escríbenos y con gusto te atenderemos con la mejor asesoría en cítricos.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- WRAPPER DE CONTACTO (INFO + FORMULARIO) -->
+        <div class="contact-wrapper">
+            
+            <!-- TARJETA LATERAL DE INFORMACIÓN DE CANALES -->
+            <div class="contact-info-card">
+                <div>
+                    <span class="section-tag" style="background: rgba(255,255,255,0.15); color: var(--citrus-lemon);">Canales Directos</span>
+                    <h3 style="margin-top: 8px;">Hablemos de Cítricos</h3>
+                    <p>
+                        Estamos listos para resolver tus dudas sobre disponibilidad de cosecha, calibres vigentes y modalidades de entrega.
+                    </p>
+
+                    <div class="contact-channel-list">
+                        <div class="channel-item">
+                            <div class="channel-icon">💬</div>
+                            <div class="channel-details">
+                                <span>WhatsApp & Comercial</span>
+                                <strong>+57 300 000 0000</strong>
+                            </div>
+                        </div>
+
+                        <div class="channel-item">
+                            <div class="channel-icon">✉️</div>
+                            <div class="channel-details">
+                                <span>Correo Electrónico</span>
+                                <strong>contacto@merletcitricos.com</strong>
+                            </div>
+                        </div>
+
+                        <div class="channel-item">
+                            <div class="channel-icon">📍</div>
+                            <div class="channel-details">
+                                <span>Zona de Producción</span>
+                                <strong>Región Citrícola, Colombia</strong>
+                            </div>
+                        </div>
+
+                        <div class="channel-item">
+                            <div class="channel-icon">🕒</div>
+                            <div class="channel-details">
+                                <span>Horario de Atención</span>
+                                <strong>Lunes a Sábado: 7:00 AM - 6:00 PM</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FICHA DEL ESTUDIANTE / AUTORÍA -->
+                <div class="project-author-box">
+                    <h4>🎓 Datos del Proyecto</h4>
+                    <p><strong>Estudiante:</strong> Andrea Yulieth Carrascal Ospino</p>
+                    <p><strong>Grado:</strong> 11-02</p>
+                    <p><strong>Institución:</strong> Proyecto SENA / Articulación Agrícola</p>
+                </div>
+            </div>
+
+            <!-- FORMULARIO DE COTIZACIÓN Y CONTACTO -->
+            <div class="contact-form-card">
+                <h3>Solicitud de Cotización</h3>
+                <p>Completa los campos a continuación y te responderemos en breve con la propuesta adecuada para tu pedido.</p>
+
+                <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                    <div class="form-grid">
+                        
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" class="form-control" placeholder="Tu nombre o empresa" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / WhatsApp *</label>
+                            <input type="tel" id="telefono" class="form-control" placeholder="Ej: 310 123 4567" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" class="form-control" placeholder="ejemplo@correo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="producto">Cítrico de Interés</label>
+                            <select id="producto" class="form-control">
+                                <option value="tahiti">🍋 Limón Tahití (Persa)</option>
+                                <option value="eureka">🍋 Limón Eureka (Amarillo)</option>
+                                <option value="valencia">🍊 Naranja Valencia</option>
+                                <option value="criolla">🍊 Naranja Criolla</option>
+                                <option value="mixto">🍊🍋 Pedido Mixto</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="empaqueSelect">Tipo de Empaque</label>
+                            <select id="empaqueSelect" class="form-control">
+                                <option value="caja-export">📦 Caja Cartón Exportación (4.5kg / 18kg)</option>
+                                <option value="malla">🛍️ Malla Retail (1kg / 2kg / 3kg)</option>
+                                <option value="canastilla">🧺 Canastilla Plástica (20kg)</option>
+                                <option value="granel">🚛 A granel / Por tonelada</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="mensaje">Detalles del Pedido o Mensaje *</label>
+                            <textarea id="mensaje" class="form-control" placeholder="Indícanos la cantidad estimada (kilos/toneladas), calibre preferido o dudas sobre la cosecha..." required></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.05rem; padding: 16px;">
+                                <span>🚀 Enviar Solicitud de Cotización</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+
+                <!-- MENSAJE DE CONFIRMACIÓN DINÁMICO -->
+                <div id="formSuccessMessage" style="display: none; margin-top: 20px; padding: 16px 20px; background: #e8f5e9; border: 1.5px solid #4caf50; border-radius: var(--radius-sm); color: #1b5e20;">
+                    <strong>✅ ¡Solicitud enviada con éxito!</strong>
+                    <p style="margin: 4px 0 0; font-size: 0.92rem;">Gracias por contactar a <strong>MERLET</strong>. Nos comunicaremos contigo a la mayor brevedad.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
+        <section style="background: #ffffff; border-radius: var(--radius-lg); border: 1px solid var(--border-color); padding: 40px; margin-bottom: 50px; box-shadow: var(--shadow-sm);">
+            <div class="section-header" style="margin-bottom: 30px;">
+                <span class="section-tag">Dudas Comunes</span>
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                <div style="background: var(--bg-main); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                    <h4 style="color: var(--green-primary); margin-bottom: 8px;">¿Cuál es el pedido mínimo para despachos?</h4>
+                    <p style="font-size: 0.92rem; color: var(--text-muted);">Manejamos despachos desde canastillas individuales (20kg) hasta pedidos por estiba o contenedores completos.</p>
+                </div>
+
+                <div style="background: var(--bg-main); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                    <h4 style="color: var(--green-primary); margin-bottom: 8px;">¿Cómo garantizan la frescura de la fruta?</h4>
+                    <p style="font-size: 0.92rem; color: var(--text-muted);">Cosechamos bajo pedido programado, realizamos selección inmediata y despachamos en vehículos con ventilación controlada.</p>
+                </div>
+
+                <div style="background: var(--bg-main); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                    <h4 style="color: var(--green-primary); margin-bottom: 8px;">¿Ofrecen fruta con certificado fitosanitario?</h4>
+                    <p style="font-size: 0.92rem; color: var(--text-muted);">Sí, nuestros lotes cuentan con trazabilidad agronómica apta para cumplimiento de normativas de comercialización.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER MODERNO -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            
+            <div class="footer-col footer-about">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                    <span style="font-size: 1.8rem;">🍋</span>
+                    <h3 style="color: #ffffff; font-size: 1.6rem; margin: 0;">MERLET</h3>
+                </div>
+                <p>
+                    Compañía dedicada a la producción y comercialización de frutas cítricas frescas (naranjas y limones), destacándonos por la calidad, frescura y respeto por el medio ambiente.
+                </p>
+                <div class="footer-eco-badge">
+                    <span>🌱</span>
+                    <span>100% Sostenible y Ecológico</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul class="footer-links-list">
+                    <li><a href="index.html"><span>›</span> Inicio</a></li>
+                    <li><a href="Descripcion.html"><span>›</span> Descripción & Misión</a></li>
+                    <li><a href="Productos.html"><span>›</span> Catálogo de Cítricos</a></li>
+                    <li><a href="Productos.html#empaque"><span>›</span> Tipos de Empaque</a></li>
+                    <li><a href="Productos.html#calibres"><span>›</span> Tabla de Calibres</a></li>
+                    <li><a href="Contacto.html"><span>›</span> Contacto y Cotizaciones</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Nuestros Cítricos</h4>
+                <ul class="footer-links-list">
+                    <li><a href="Productos.html#naranjas"><span>🍊</span> Naranja Valencia</a></li>
+                    <li><a href="Productos.html#limones"><span>🍋</span> Limón Tahití (Persa)</a></li>
+                    <li><a href="Productos.html#limones"><span>🍋</span> Limón Eureka</a></li>
+                    <li><a href="Productos.html#empaque"><span>📦</span> Cajas de Exportación</a></li>
+                    <li><a href="Productos.html#empaque"><span>🛍️</span> Mallas Biodegradables</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Proyecto Educativo</h4>
+                <div class="footer-student-box">
+                    <strong>Andrea Yulieth Carrascal Ospino</strong>
+                    <p>Estudiante de Grado 11-02 enfocada en el desarrollo y análisis de proyectos agrícolas sostenibles.</p>
+                    <span class="footer-tag-sena">Proyecto SENA</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 MERLET - Todos los derechos reservados. Producción y comercialización de cítricos.</p>
+            <p>Diseñado con pasión por la agricultura colombiana 💚</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE INTERACCIÓN DEL FORMULARIO -->
+    <script>
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const successBox = document.getElementById('formSuccessMessage');
+            successBox.style.display = 'block';
+            document.getElementById('contactForm').reset();
+            setTimeout(() => {
+                successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
+
+        // Selección automática de producto si viene por URL
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const prod = urlParams.get('prod');
+            if (prod) {
+                const selectElem = document.getElementById('producto');
+                if (prod.includes('tahiti')) selectElem.value = 'tahiti';
+                else if (prod.includes('eureka')) selectElem.value = 'eureka';
+                else if (prod.includes('valencia')) selectElem.value = 'valencia';
+                else if (prod.includes('criolla')) selectElem.value = 'criolla';
+            }
+        });
+    </script>
+
+</body>
+</html>
