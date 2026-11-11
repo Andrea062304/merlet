@@ -1424,3 +1424,324 @@ footer.modern-footer {
         text-align: center;
     }
 }
+/* ==========================================================
+   LOGO MERLET (NAVBAR Y FOOTER)
+   ========================================================== */
+.brand-icon-wrapper.brand-icon-img {
+    width: 52px;
+    height: 52px;
+    background: #000000;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.brand-icon-wrapper.brand-icon-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.12);
+}
+
+.brand-logo:hover .brand-icon-wrapper.brand-icon-img {
+    transform: rotate(-8deg) scale(1.08);
+}
+
+.footer-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 2px rgba(129, 199, 132, 0.4);
+}
+
+/* ==========================================================
+   PÁGINA: NUESTRO PROCESO (LAVADO, SECADO, EMPACADO, CANASTILLAS)
+   ========================================================== */
+.proceso-banner {
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 45px 24px;
+}
+
+.proceso-banner-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.proceso-banner-text .section-tag {
+    margin-bottom: 12px;
+}
+
+.proceso-banner-logo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    animation: floatLemon 6s ease-in-out infinite;
+}
+
+/* Recorrido rápido de etapas */
+.proceso-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+    padding: 12px 20px;
+    max-width: 760px;
+    margin: -10px auto 56px;
+    position: relative;
+}
+
+.flow-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--green-darkest);
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    transition: var(--transition-normal);
+}
+
+.flow-item:hover {
+    background: var(--green-pale);
+    color: var(--green-primary);
+}
+
+.flow-icon {
+    font-size: 1.25rem;
+}
+
+.flow-arrow {
+    color: var(--green-lime);
+    font-weight: 800;
+}
+
+/* Etapas */
+.proceso-step {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 72px;
+    scroll-margin-top: 110px;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.proceso-step.reverse .proceso-img {
+    order: 2;
+}
+
+.proceso-img {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 4 / 3;
+    background: var(--green-pale);
+}
+
+.proceso-img.portrait {
+    aspect-ratio: 4 / 5;
+    max-width: 440px;
+    justify-self: center;
+    width: 100%;
+}
+
+.proceso-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: zoom-in;
+    transition: transform 0.6s ease;
+}
+
+.proceso-img:hover img {
+    transform: scale(1.05);
+}
+
+.proceso-num {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: var(--green-darkest);
+    background: var(--citrus-lemon);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lemon);
+    pointer-events: none;
+}
+
+.proceso-etapa {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--citrus-orange);
+    margin-bottom: 8px;
+}
+
+.proceso-info h3 {
+    font-size: 1.9rem;
+    margin-bottom: 14px;
+}
+
+.proceso-info p {
+    color: var(--text-muted);
+    font-size: 1.02rem;
+    margin-bottom: 20px;
+}
+
+.proceso-puntos {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.proceso-puntos li {
+    background: var(--green-pale);
+    color: var(--green-primary);
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    border: 1px solid #c8e6c9;
+}
+
+.proceso-puntos li::before {
+    content: "✓ ";
+    font-weight: 800;
+}
+
+/* Visor de imágenes */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 25, 10, 0.92);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 24px;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-normal);
+}
+
+.lightbox.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: var(--radius-md);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox p {
+    color: #e8f5e9;
+    text-align: center;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 900px) {
+    .proceso-step,
+    .proceso-step.reverse {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .proceso-step.reverse .proceso-img {
+        order: 0;
+    }
+
+    .proceso-banner-inner {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .proceso-banner-inner p {
+        margin: 0 auto;
+    }
+
+    .proceso-banner-logo {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 600px) {
+    .proceso-flow {
+        border-radius: var(--radius-md);
+    }
+
+    .flow-arrow {
+        display: none;
+    }
+
+    .proceso-info h3 {
+        font-size: 1.5rem;
+    }
+}
+/* FOTOGRAFÍAS DE LAS TARJETAS MERLET */
+
+.product-photo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 14px 14px 0 0;
+    transition: transform 0.4s ease;
+}
+
+.product-img-wrapper {
+    overflow: hidden;
+}
+
+.product-card:hover .product-photo {
+    transform: scale(1.05);
+}

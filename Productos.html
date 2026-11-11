@@ -6,6 +6,27 @@
     <title>Productos, Empaque y Calibres | MERLET</title>
     <meta name="description" content="Catálogo completo de cítricos MERLET: Naranjas y Limones de exportación, especificaciones técnicas de empaque y tablas de calibres.">
     <link rel="stylesheet" href="css/estilos.css">
+
+    <style>
+        .product-img-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-photo {
+            display: block;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 14px 14px 0 0;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-photo {
+            transform: scale(1.05);
+        }
+    </style>
+
 </head>
 
 <body>
@@ -16,18 +37,15 @@
             <span>🌿 Producción Sostenible & Cítricos Seleccionados</span>
             <span>📍 Criterios Internacionales de Empaque y Calibre</span>
         </div>
-        <span class="top-bar-badge">Grado 11-02 | Proyecto SENA</span>
+        
     </div>
 
     <!-- NAVEGACIÓN PRINCIPAL -->
     <header class="navbar">
         <div class="nav-container">
             <a href="index.html" class="brand-logo">
-                <div class="brand-icon-wrapper">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                        <ellipse cx="12" cy="12" rx="9" ry="7" transform="rotate(-30 12 12)" fill="#fbc02d" stroke="#f57f17" stroke-width="1.5"/>
-                        <path d="M12 5C13 3 16 3 17 4C17 6 15 8 13 8" stroke="#2e7d32" stroke-width="1.5" stroke-linecap="round" fill="#81c784"/>
-                    </svg>
+                <div class="brand-icon-wrapper brand-icon-img">
+                    <img src="imgs/logo.jpeg" alt="Logo MERLET">
                 </div>
                 <div class="brand-text">
                     <h1>MERLET</h1>
@@ -38,6 +56,7 @@
             <nav class="nav-links">
                 <a href="index.html">Inicio</a>
                 <a href="Descripcion.html">Descripción</a>
+                <a href="Proceso.html">Proceso</a>
                 <a href="Productos.html" class="active">Productos & Empaque</a>
                 <a href="Contacto.html" class="nav-cta">Contacto</a>
             </nav>
@@ -71,17 +90,10 @@
                 <!-- PRODUCTO 1: LIMÓN TAHITÍ -->
                 <div class="product-card" id="limones">
                     <div class="product-img-wrapper">
-                        <!-- Espacio para Imagen con contenedor estilizado -->
-                        <div class="product-placeholder-svg" style="background: linear-gradient(135deg, #e8f8f5 0%, #d1f2eb 100%);">
-                            <svg width="110" height="110" viewBox="0 0 120 120" fill="none">
-                                <ellipse cx="60" cy="65" rx="46" ry="36" transform="rotate(-15 60 65)" fill="#2e7d32" stroke="#1b5e20" stroke-width="2"/>
-                                <ellipse cx="58" cy="63" rx="40" ry="30" transform="rotate(-15 58 63)" fill="#43a047"/>
-                                <path d="M60 22 C66 14, 80 16, 82 24 C72 30, 62 27, 60 22 Z" fill="#81c784"/>
-                                <circle cx="45" cy="50" r="4" fill="#ffffff" opacity="0.4"/>
-                            </svg>
-                            <span style="font-weight: 700; color: #1b5e20; margin-top: 6px; font-size: 0.85rem;">Espacio para Fotografía: Limón Tahití</span>
-                        </div>
-                        <span class="product-badge">Sin Semilla</span>
+                        <img src="imgs/limotahiti.jpeg"
+                             alt="Limón Tahití fresco"
+                             class="product-photo">
+<span class="product-badge">Sin Semilla</span>
                         <span class="product-category-tag">Exportación</span>
                     </div>
 
@@ -108,16 +120,8 @@
                 <!-- PRODUCTO 2: LIMÓN EUREKA / AMARILLO -->
                 <div class="product-card">
                     <div class="product-img-wrapper">
-                        <!-- Espacio para Imagen -->
-                        <div class="product-placeholder-svg" style="background: linear-gradient(135deg, #fffde7 0%, #fff59d 100%);">
-                            <svg width="110" height="110" viewBox="0 0 120 120" fill="none">
-                                <path d="M25 65 C18 50, 30 28, 55 22 C80 16, 102 28, 105 52 C108 76, 95 94, 70 98 C45 102, 28 86, 25 65 Z" fill="#fdd835" stroke="#f57f17" stroke-width="2"/>
-                                <path d="M60 20 C68 12, 82 14, 84 22 C76 26, 64 26, 60 20 Z" fill="#4caf50"/>
-                                <circle cx="48" cy="46" r="4" fill="#ffffff" opacity="0.6"/>
-                            </svg>
-                            <span style="font-weight: 700; color: #f57f17; margin-top: 6px; font-size: 0.85rem;">Espacio para Fotografía: Limón Eureka</span>
-                        </div>
-                        <span class="product-badge">Aroma Intenso</span>
+                        <img src="imgs/limonamarillo.jpeg" alt="Limón Eureka fresco" class="product-photo">
+<span class="product-badge">Aroma Intenso</span>
                         <span class="product-category-tag">Gourmet</span>
                     </div>
 
@@ -144,17 +148,8 @@
                 <!-- PRODUCTO 3: NARANJA VALENCIA -->
                 <div class="product-card" id="naranjas">
                     <div class="product-img-wrapper">
-                        <!-- Espacio para Imagen -->
-                        <div class="product-placeholder-svg" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
-                            <svg width="110" height="110" viewBox="0 0 120 120" fill="none">
-                                <circle cx="60" cy="65" r="45" fill="#ff9800" stroke="#e65100" stroke-width="2"/>
-                                <circle cx="60" cy="65" r="36" fill="#ffa726"/>
-                                <path d="M60 20 C66 12, 80 14, 82 22 C72 27, 62 25, 60 20 Z" fill="#2e7d32"/>
-                                <circle cx="50" cy="50" r="4" fill="#ffffff" opacity="0.6"/>
-                            </svg>
-                            <span style="font-weight: 700; color: #e65100; margin-top: 6px; font-size: 0.85rem;">Espacio para Fotografía: Naranja Valencia</span>
-                        </div>
-                        <span class="product-badge">Extra Jugosa</span>
+                        <img src="imgs/valencia.jpeg" alt="Naranja Valencia fresca" class="product-photo">
+<span class="product-badge">Extra Jugosa</span>
                         <span class="product-category-tag">Agroindustria</span>
                     </div>
 
@@ -181,17 +176,8 @@
                 <!-- PRODUCTO 4: NARANJA SWEET / CRIOLLA -->
                 <div class="product-card">
                     <div class="product-img-wrapper">
-                        <!-- Espacio para Imagen -->
-                        <div class="product-placeholder-svg" style="background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%);">
-                            <svg width="110" height="110" viewBox="0 0 120 120" fill="none">
-                                <circle cx="60" cy="65" r="44" fill="#f57c00" stroke="#bf360c" stroke-width="2"/>
-                                <circle cx="60" cy="65" r="35" fill="#fb8c00"/>
-                                <path d="M60 21 C67 15, 78 16, 80 23 C72 27, 62 26, 60 21 Z" fill="#388e3c"/>
-                                <circle cx="48" cy="52" r="3" fill="#ffffff" opacity="0.5"/>
-                            </svg>
-                            <span style="font-weight: 700; color: #bf360c; margin-top: 6px; font-size: 0.85rem;">Espacio para Fotografía: Naranja Criolla</span>
-                        </div>
-                        <span class="product-badge">Sabor Tradicional</span>
+                        <img src="imgs/dulce.jpeg" alt="Naranja Criolla fresca" class="product-photo">
+<span class="product-badge">Sabor Tradicional</span>
                         <span class="product-category-tag">Consumo Fresco</span>
                     </div>
 
@@ -392,7 +378,7 @@
             
             <div class="footer-col footer-about">
                 <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                    <span style="font-size: 1.8rem;">🍋</span>
+                    <img src="imgs/logo.jpeg" alt="Logo MERLET" class="footer-logo">
                     <h3 style="color: #ffffff; font-size: 1.6rem; margin: 0;">MERLET</h3>
                 </div>
                 <p>
@@ -409,6 +395,7 @@
                 <ul class="footer-links-list">
                     <li><a href="index.html"><span>›</span> Inicio</a></li>
                     <li><a href="Descripcion.html"><span>›</span> Descripción & Misión</a></li>
+                    <li><a href="Proceso.html"><span>›</span> Nuestro Proceso</a></li>
                     <li><a href="Productos.html"><span>›</span> Catálogo de Cítricos</a></li>
                     <li><a href="Productos.html#empaque"><span>›</span> Tipos de Empaque</a></li>
                     <li><a href="Productos.html#calibres"><span>›</span> Tabla de Calibres</a></li>
@@ -427,14 +414,7 @@
                 </ul>
             </div>
 
-            <div class="footer-col">
-                <h4>Proyecto Educativo</h4>
-                <div class="footer-student-box">
-                    <strong>Andrea Yulieth Carrascal Ospino</strong>
-                    <p>Estudiante de Grado 11-02 enfocada en el desarrollo y análisis de proyectos agrícolas sostenibles.</p>
-                    <span class="footer-tag-sena">Proyecto SENA</span>
-                </div>
-            </div>
+            
 
         </div>
 
